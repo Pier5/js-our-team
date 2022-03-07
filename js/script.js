@@ -69,6 +69,14 @@ for (let i = 0; i < arrTeam.length; i++) {
     cardImage.append(eleImg);
     cardText.append(h3, p);
 
+    
+    cardImage.classList.add('card-image');
+
+    cardText.classList.add('card-text');
+
+    teamCard.classList.add('team-card');
+
+
     teamCard.append(cardImage, cardText);
 
     teamContainer.append(teamCard);
