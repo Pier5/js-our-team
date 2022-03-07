@@ -57,11 +57,9 @@ for (let i = 0; i < arrTeam.length; i++) {
     
     let cardImage = document.createElement('div');
     let eleImg = document.createElement('img');
-
-    // let eleName = document.createElement('h3');
-    // let eleRole = document.createElement('p');
-    
     let cardText = document.createElement('div');
+    let h3 = document.createElement('h3');
+    let p = document.createElement('p');
     
     eleImg.src = arrTeam[i].img;
     let eleName = arrTeam[i].name;
@@ -70,10 +68,12 @@ for (let i = 0; i < arrTeam.length; i++) {
     cardImage.classList.add('card-image');
     cardText.classList.add('card-text');
     teamCard.classList.add('team-card');
+
+    h3.innerHTML = `${eleName}`;
+    p.innerHTML = `${eleRole}`;
     
     cardImage.append(eleImg);
-    cardText.append(eleName, eleRole);
-
+    cardText.append(h3, p);
     teamCard.append(cardImage, cardText);
 
     teamContainer.append(teamCard);
