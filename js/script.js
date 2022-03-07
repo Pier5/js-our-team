@@ -52,36 +52,29 @@ let arrTeam = [
 
 let teamContainer = document.querySelector('.team-container');
 
-
 for (let i = 0; i < arrTeam.length; i++) {
     let teamCard = document.createElement('div');
-    let eleImg = document.createElement('img');
+    
     let cardImage = document.createElement('div');
-    let cardText = document.createElement('div');
-    eleImg.classList.add('card-image');
+    let eleImg = document.createElement('img');
 
-    let h3 = document.createElement('div');
-    let p = document.createElement('div');
+    // let eleName = document.createElement('h3');
+    // let eleRole = document.createElement('p');
+    
+    let cardText = document.createElement('div');
+    
     eleImg.src = arrTeam[i].img;
-    h3 = arrTeam[i].name;
-    p = arrTeam[i].role;
+    let eleName = arrTeam[i].name;
+    let eleRole = arrTeam[i].role;
+
+    cardImage.classList.add('card-image');
+    cardText.classList.add('card-text');
+    teamCard.classList.add('team-card');
     
     cardImage.append(eleImg);
-    cardText.append(h3, p);
-
-    
-    cardImage.classList.add('card-image');
-
-    cardText.classList.add('card-text');
-
-    teamCard.classList.add('team-card');
-
+    cardText.append(eleName, eleRole);
 
     teamCard.append(cardImage, cardText);
 
     teamContainer.append(teamCard);
-    
 }
-
-      
-        
